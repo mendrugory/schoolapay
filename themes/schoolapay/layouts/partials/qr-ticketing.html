@@ -1,0 +1,38 @@
+<section class="section section-alt" id="qr-ticketing">
+  <div class="container qr-section-grid">
+    <div class="qr-copy">
+      <p class="eyebrow">{{ .data.eyebrow }}</p>
+      <h2 class="section-title">{{ .data.headline }}</h2>
+      <p class="section-lead">{{ .data.copy }}</p>
+      <ul class="qr-benefits">
+        {{ range .data.benefits }}
+        <li>
+          <span class="qr-check" aria-hidden="true">✓</span>
+          <div>
+            <strong>{{ .title }}</strong>
+            <span>{{ .description }}</span>
+          </div>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    <div class="qr-visual" aria-hidden="true">
+      <div class="qr-phone">
+        <div class="qr-phone-screen">
+          <p class="qr-phone-label">Event Entry</p>
+          <p class="qr-phone-event">Spring Theatre Show</p>
+          <div class="qr-code-large">
+            <div class="qr-pulse"></div>
+            <div class="qr-grid qr-grid--large"></div>
+          </div>
+          <p class="qr-valid">Valid · Scanned at gate</p>
+        </div>
+      </div>
+      <div class="entry-card">
+        <span class="entry-status">✓ Validated</span>
+        <p>Emma Johnson</p>
+        <span class="entry-time">Entry confirmed</span>
+      </div>
+    </div>
+  </div>
+</section>

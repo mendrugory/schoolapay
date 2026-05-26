@@ -1,0 +1,12 @@
+[build]
+  command = "hugo --minify --baseURL $DEPLOY_PRIME_URL"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.154.5"
+
+[context.production.environment]
+  HUGO_ENV = "production"
+
+[context.production]
+  command = "hugo --minify --baseURL https://schoolapay.com/"

@@ -1,0 +1,7 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    {{ partial "logo.html" . }}
+    <p class="footer-copy">&copy; {{ now.Year }} SchoolaPay. All rights reserved.</p>
+    <a href="mailto:{{ .Site.Params.contact_email }}" class="footer-email">{{ .Site.Params.contact_email }}</a>
+  </div>
+</footer>

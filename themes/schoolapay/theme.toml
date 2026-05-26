@@ -1,0 +1,9 @@
+name = 'SchoolaPay'
+license = 'MIT'
+licenselink = 'https://opensource.org/licenses/MIT'
+description = 'Minimal landing page theme for SchoolaPay'
+tags = ['landing', 'minimal']
+min_version = '0.120.0'
+
+[author]
+  name = 'SchoolaPay'

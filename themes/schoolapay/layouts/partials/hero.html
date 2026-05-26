@@ -1,0 +1,29 @@
+<section class="hero section" id="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-dots"></div>
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+  </div>
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <span class="badge">{{ .data.badge }}</span>
+      <h1 class="hero-headline">
+        {{ $parts := split .data.headline .data.headline_emphasis }}
+        {{ index $parts 0 }}<span class="text-primary">{{ .data.headline_emphasis }}</span>{{ index $parts 1 }}
+      </h1>
+      <p class="hero-subheadline">{{ .data.subheadline }}</p>
+      <div class="hero-actions">
+        <a href="#demo" class="btn btn-primary btn-lg">Request a Demo</a>
+      </div>
+      <ul class="trust-row" aria-label="Key capabilities">
+        {{ range .data.trust }}
+        <li><span class="trust-check" aria-hidden="true">✓</span>{{ . }}</li>
+        {{ end }}
+      </ul>
+    </div>
+    <div class="hero-visual">
+      {{ partial "phone-mockup.html" . }}
+      {{ partial "dashboard-mockup.html" . }}
+    </div>
+  </div>
+</section>

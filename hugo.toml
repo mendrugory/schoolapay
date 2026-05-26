@@ -1,0 +1,24 @@
+baseURL = 'https://schoolapay.com/'
+languageCode = 'en-us'
+title = 'SchoolaPay'
+theme = 'schoolapay'
+disableKinds = ['taxonomy', 'term', 'RSS']
+
+[params]
+  description = 'SchoolaPay helps schools manage extracurricular payments, QR ticketing, receipts, reminders, and parent coordination in one secure platform.'
+  tagline = 'The simplest way for schools to manage activity payments and parent coordination.'
+  cta_text = 'Request a Demo'
+  contact_email = 'hello@schoolapay.com'
+  # Web3Forms access key — get yours free at https://web3forms.com
+  # Emails will be forwarded to the address you register there.
+  web3forms_key = 'f8f1ba31-40de-43cf-b671-ff44b530285d'
+  # Umami analytics — https://umami.is (or your self-hosted instance)
+  # Website ID from Settings → Websites in the Umami dashboard
+  umami_website_id = '0d6872b0-359e-4bce-ba25-f7a5c689b398'
+  # Default: Umami Cloud. For self-hosted, use e.g. 'https://analytics.example.com/script.js'
+  umami_script_src = 'https://cloud.umami.is/script.js'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

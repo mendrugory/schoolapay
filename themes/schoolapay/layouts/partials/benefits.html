@@ -1,0 +1,20 @@
+<section class="section" id="benefits">
+  <div class="container">
+    <p class="eyebrow">{{ .data.eyebrow }}</p>
+    <div class="benefits-grid">
+      {{ range .data.cards }}
+      <article class="card benefit-card"{{ if eq .title "For Schools" }} id="schools"{{ else if eq .title "For Parents" }} id="parents"{{ end }}>
+        <div class="benefit-icon benefit-icon--{{ .icon }}">
+          {{ partial "icon.html" (dict "name" .icon) }}
+        </div>
+        <h3>{{ .title }}</h3>
+        <ul>
+          {{ range .items }}
+          <li><span class="check" aria-hidden="true">✓</span>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>

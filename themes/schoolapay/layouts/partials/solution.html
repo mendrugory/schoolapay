@@ -1,0 +1,45 @@
+<section class="section" id="solution">
+  <div class="container solution-grid">
+    <div class="solution-copy">
+      <p class="eyebrow">{{ .data.eyebrow }}</p>
+      <h2 class="section-title">{{ .data.headline }}</h2>
+      <p class="section-lead">{{ .data.copy }}</p>
+    </div>
+    <ul class="solution-features">
+      {{ range .data.features }}
+      <li class="solution-feature">
+        <span class="solution-icon solution-icon--{{ .icon }}" aria-hidden="true">
+          {{ partial "icon.html" (dict "name" .icon) }}
+        </span>
+        <div>
+          <h3>{{ .title }}</h3>
+          <p>{{ .description }}</p>
+        </div>
+      </li>
+      {{ end }}
+    </ul>
+    <div class="solution-visual" aria-hidden="true">
+      <div class="workflow-card">
+        <div class="workflow-step">
+          <span class="wf-icon wf-icon--school">{{ partial "icon.html" (dict "name" "school") }}</span>
+          <span>School creates activity</span>
+        </div>
+        <div class="workflow-arrow">↓</div>
+        <div class="workflow-step">
+          <span class="wf-icon wf-icon--parent">{{ partial "icon.html" (dict "name" "parents") }}</span>
+          <span>Parent pays on mobile</span>
+        </div>
+        <div class="workflow-arrow">↓</div>
+        <div class="workflow-step">
+          <span class="wf-icon wf-icon--qr">{{ partial "icon.html" (dict "name" "qr") }}</span>
+          <span>QR ticket generated</span>
+        </div>
+        <div class="workflow-arrow">↓</div>
+        <div class="workflow-step">
+          <span class="wf-icon wf-icon--scan">{{ partial "icon.html" (dict "name" "scan") }}</span>
+          <span>Staff validates entry</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

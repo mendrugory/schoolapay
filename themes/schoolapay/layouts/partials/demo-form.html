@@ -1,0 +1,81 @@
+<section class="section demo-section" id="demo">
+  <div class="container demo-grid">
+    <div class="demo-copy">
+      <h2 class="section-title">{{ .data.headline }}</h2>
+      <p class="section-lead">{{ .data.copy }}</p>
+      <ul class="demo-bullets">
+        {{ range .data.bullets }}
+        <li><span class="check" aria-hidden="true">✓</span>{{ . }}</li>
+        {{ end }}
+      </ul>
+    </div>
+    <div class="demo-form-wrap">
+      <form class="demo-form card" id="demo-form" novalidate
+        data-web3forms-key="{{ .ctx.Site.Params.web3forms_key }}"
+        data-success="{{ .data.success }}"
+        data-error="{{ .data.error }}"
+        data-email="{{ .ctx.Site.Params.contact_email }}">
+
+        {{- /* Web3Forms hidden fields — only rendered when a key is configured */}}
+        {{ with .ctx.Site.Params.web3forms_key }}
+        <input type="hidden" name="access_key" value="{{ . }}">
+        {{ end }}
+        <input type="hidden" name="subject" value="New Demo Request — SchoolaPay">
+        <input type="hidden" name="from_name" value="SchoolaPay Website">
+
+        <div class="form-status" id="form-status" role="status" aria-live="polite" hidden></div>
+
+        <div class="form-field">
+          <label for="school-name">School name <span class="required">*</span></label>
+          <input type="text" id="school-name" name="schoolName" required autocomplete="organization">
+          <span class="field-error" id="error-schoolName"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="contact-name">Contact name <span class="required">*</span></label>
+          <input type="text" id="contact-name" name="contactName" required autocomplete="name">
+          <span class="field-error" id="error-contactName"></span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+            <span class="field-error" id="error-email"></span>
+          </div>
+          <div class="form-field">
+            <label for="phone">Phone number <span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" required autocomplete="tel">
+            <span class="field-error" id="error-phone"></span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="role">Role at school <span class="required">*</span></label>
+            <input type="text" id="role" name="role" required>
+            <span class="field-error" id="error-role"></span>
+          </div>
+          <div class="form-field">
+            <label for="students">Number of students <span class="required">*</span></label>
+            <input type="number" id="students" name="students" required min="1">
+            <span class="field-error" id="error-students"></span>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="challenges">Current payment/admin challenges</label>
+          <textarea id="challenges" name="challenges" rows="3" placeholder="Tell us about your current workflow…"></textarea>
+        </div>
+
+        {{- /* Honeypot — hidden from real users, traps bots */}}
+        <div class="honeypot" aria-hidden="true">
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-block" id="demo-submit">Request a Demo</button>
+        <p class="form-privacy">{{ .data.privacy }}</p>
+      </form>
+    </div>
+  </div>
+</section>

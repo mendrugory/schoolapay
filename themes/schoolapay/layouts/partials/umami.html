@@ -1,0 +1,5 @@
+{{- $id := .Site.Params.umami_website_id -}}
+{{- $src := .Site.Params.umami_script_src | default "https://cloud.umami.is/script.js" -}}
+{{- if and (eq hugo.Environment "production") $id -}}
+  <script defer src="{{ $src }}" data-website-id="{{ $id }}"></script>
+{{- end -}}

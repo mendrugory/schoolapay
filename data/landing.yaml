@@ -1,0 +1,234 @@
+hero:
+  badge: "Built for Schools. Loved by Parents."
+  headline: "The simplest way for schools to manage activity payments and parent coordination."
+  headline_emphasis: "simplest"
+  subheadline: "SchoolaPay helps schools simplify payments, reminders, QR ticketing, receipts, and communication — all in one secure platform."
+  trust:
+    - Mobile-first
+    - QR Ticketing
+    - Digital Receipts
+    - Secure & Reliable
+
+problem:
+  eyebrow: "The Challenge"
+  headline: "Managing school activities shouldn't be this hard."
+  copy: "Schools and parent coordinators often rely on outdated, fragmented tools that create more work and more confusion."
+  cards:
+    - title: Cash collection friction
+      color: blue
+      icon: cash
+    - title: Manual payment tracking
+      color: emerald
+      icon: chart
+    - title: WhatsApp coordination chaos
+      color: orange
+      icon: message
+    - title: Spreadsheet administration
+      color: coral
+      icon: spreadsheet
+    - title: Lost receipts & confirmations
+      color: blue
+      icon: receipt
+    - title: Parent follow-ups & reminders
+      color: emerald
+      icon: bell
+    - title: Paper tickets & manual entry
+      color: orange
+      icon: ticket
+    - title: Payment visibility issues
+      color: coral
+      icon: eye
+    - title: High administrative overhead
+      color: blue
+      icon: settings
+    - title: Event entry management
+      color: emerald
+      icon: events
+
+solution:
+  eyebrow: "Our Solution"
+  headline: "One platform. Total clarity."
+  copy: "SchoolaPay centralizes every part of your activity management workflow so schools save time, parents stay informed, and students have a better experience."
+  features:
+    - title: Mobile Payments
+      description: "Parents pay securely from their phones."
+      icon: payments
+    - title: Digital Receipts
+      description: "Every payment is recorded and accessible."
+      icon: receipt
+    - title: QR Ticketing
+      description: "Instant, secure entry to school events."
+      icon: qr
+    - title: Admin Dashboard
+      description: "Real-time visibility into payments, activities, and participation."
+      icon: dashboard
+    - title: Smart Reminders
+      description: "Automated notifications reduce manual follow-ups."
+      icon: bell
+    - title: Attendance Tracking
+      description: "Track attendance and participation with confidence."
+      icon: scan
+
+how_it_works:
+  eyebrow: "How It Works"
+  headline: "Designed to fit your existing workflow."
+  steps:
+    - title: School creates an activity
+      description: "Add activity details, fees, and schedule."
+      icon: school
+    - title: Parents receive a notification
+      description: "Instant alerts about new activities and payments."
+      icon: bell
+    - title: Parent completes payment
+      description: "Secure mobile payment in just a few taps."
+      icon: payments
+    - title: Receipt & QR ticket are generated
+      description: "Instant digital receipt and unique QR ticket."
+      icon: qr
+    - title: School validates attendance
+      description: "Scan QR code and track participation in real time."
+      icon: scan
+
+features:
+  eyebrow: "Powerful Features"
+  headline: "Everything you need, in one platform."
+  cards:
+    - title: Payments
+      description: "Secure, mobile-first payments for every activity."
+      icon: payments
+    - title: QR Ticketing
+      description: "Unique QR tickets for fast and secure event entry."
+      icon: qr
+    - title: Reminders
+      description: "Automated reminders reduce follow-ups and no-shows."
+      icon: bell
+    - title: Receipts
+      description: "Digital receipts accessible anytime, anywhere."
+      icon: receipt
+    - title: Admin Dashboard
+      description: "Real-time overview of payments, activities, and attendance."
+      icon: dashboard
+    - title: Reconciliation
+      description: "Simplify reporting and financial reconciliation."
+      icon: chart
+    - title: Attendance Tracking
+      description: "Track participation with accurate scan validation."
+      icon: scan
+    - title: Parent Management
+      description: "Manage multiple children and activities with ease."
+      icon: users
+
+qr_ticketing:
+  eyebrow: "QR Ticketing"
+  headline: "Modern event access that saves time and increases security."
+  copy: "SchoolaPay generates unique QR tickets linked to confirmed payments, helping schools streamline event entry and improve attendance visibility."
+  benefits:
+    - title: Faster Entry
+      description: "Reduce lines and speed up check-ins."
+    - title: Scan Validation
+      description: "Instantly verify tickets with secure scans."
+    - title: Reduced Duplicate Use
+      description: "Unique QR codes help prevent repeated scans."
+    - title: Attendance Visibility
+      description: "Track participation in real time."
+    - title: Offline Fallback
+      description: "Support validation even when connectivity is unstable."
+
+benefits:
+  eyebrow: "Benefits for Everyone in the School Community"
+  cards:
+    - title: For Schools
+      icon: school
+      items:
+        - Improve operational efficiency
+        - Increase payment visibility
+        - Enhance parent communication
+        - Streamline activity management
+    - title: For Finance/Admin Staff
+      icon: finance
+      items:
+        - Easier reconciliation and reporting
+        - Reduce manual tracking
+        - Exportable financial records
+        - Better auditability
+    - title: For Parents
+      icon: parents
+      items:
+        - Simple, secure mobile payments
+        - Digital receipts on demand
+        - Manage all children in one place
+        - Stay informed with reminders
+    - title: For Event Coordinators
+      icon: events
+      items:
+        - Fast check-ins with QR scanning
+        - Real-time attendance tracking
+        - Reduce entry errors
+        - Focus on a better event experience
+
+trust:
+  eyebrow: "Trust & Security"
+  headline: "Your data. Your trust. Our responsibility."
+  copy: "We follow industry best practices to protect your school community and keep activity workflows clear, traceable, and controlled."
+  cards:
+    - title: Payment Reliability
+      description: "Clear transaction workflows and confirmation records."
+      icon: payments
+    - title: Data Protection
+      description: "Designed to protect parent and student information."
+      icon: lock
+    - title: Auditability
+      description: "Centralized logs, receipts, and reporting."
+      icon: audit
+    - title: Permission Controls
+      description: "Role-based access for school staff."
+      icon: permissions
+    - title: Operational Transparency
+      description: "Visibility across payments, attendance, and activity workflows."
+      icon: eye
+
+proof:
+  eyebrow: "Pilot-Ready Proof"
+  headline: "Built to measure what matters during school pilots."
+  metrics:
+    - title: Payment completion
+      value: "Measured during pilot"
+    - title: Parent activation
+      value: "Measured during pilot"
+    - title: Admin time saved
+      value: "Measured during pilot"
+    - title: Scan validation success
+      value: "Measured during pilot"
+  testimonial_label: "Pilot testimonial placeholder"
+  testimonial_copy: "Use this space for feedback from school operations teams after the pilot program."
+
+faq:
+  headline: "Frequently asked questions."
+  items:
+    - question: How do parents make payments?
+      answer: "Parents receive an activity notification and can complete payment from their mobile device. After payment, they receive a digital receipt and, when needed, a QR ticket."
+    - question: Can schools issue refunds?
+      answer: "Yes. Refund workflows can be handled through the school admin process, with clear records for finance and operations teams."
+    - question: How does QR ticket validation work?
+      answer: "Each eligible activity or event can generate a unique QR ticket after payment confirmation. Staff can scan the ticket at entry to validate attendance and reduce duplicate use."
+    - question: Is SchoolaPay secure?
+      answer: "SchoolaPay is designed around secure payment workflows, role-based access, clear records, and responsible handling of parent and student information."
+    - question: Can parents manage multiple children?
+      answer: "Yes. Parents can manage activities, payments, receipts, and tickets for multiple children from one account."
+    - question: What reports are available?
+      answer: "Schools can track payment status, participation, receipts, activity records, attendance scans, and reconciliation exports."
+    - question: How does parent onboarding work?
+      answer: "The onboarding flow is designed to be simple and mobile-first, helping parents connect to their child profile and view assigned activities quickly."
+    - question: Does it work on mobile devices?
+      answer: "Yes. SchoolaPay is designed mobile-first for busy parents and staff who need quick access from their phones."
+
+demo:
+  headline: "See SchoolaPay in action."
+  copy: "Let our team show you how SchoolaPay can simplify your school's activity management and payment workflow."
+  bullets:
+    - We'll contact you within 1 business day
+    - Personalized demo for your school
+    - No commitment required
+  privacy: "Your information is only used to respond to your demo request."
+  success: "Thank you. Our team will contact you within 1 business day."
+  error: "Something went wrong. Please try again or email us directly."

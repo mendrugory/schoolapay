@@ -1,0 +1,19 @@
+{{ define "main" }}
+{{ $d := site.Data.landing }}
+{{ partial "header.html" . }}
+<main id="main-content">
+  {{ partial "hero.html" (dict "ctx" . "data" $d.hero) }}
+  {{ partial "problem.html" (dict "data" $d.problem) }}
+  {{ partial "solution.html" (dict "data" $d.solution) }}
+  {{ partial "how-it-works.html" (dict "data" $d.how_it_works) }}
+  {{ partial "features.html" (dict "data" $d.features) }}
+  {{ partial "qr-ticketing.html" (dict "data" $d.qr_ticketing) }}
+  {{ partial "benefits.html" (dict "data" $d.benefits) }}
+  {{ partial "trust.html" (dict "data" $d.trust) }}
+  {{ partial "proof.html" (dict "data" $d.proof) }}
+  {{ partial "faq.html" (dict "data" $d.faq) }}
+  {{ partial "demo-form.html" (dict "ctx" . "data" $d.demo) }}
+</main>
+{{ partial "footer.html" . }}
+{{ partial "mobile-cta.html" . }}
+{{ end }}

@@ -1,0 +1,18 @@
+<section class="section section-alt" id="how-it-works">
+  <div class="container">
+    <p class="eyebrow">{{ .data.eyebrow }}</p>
+    <h2 class="section-title">{{ .data.headline }}</h2>
+    <ol class="steps-flow">
+      {{ range $i, $step := .data.steps }}
+      <li class="step-card">
+        <span class="step-num">{{ add $i 1 }}</span>
+        <div class="step-icon step-icon--{{ $step.icon }}" aria-hidden="true">
+          {{ partial "icon.html" (dict "name" $step.icon) }}
+        </div>
+        <h3>{{ $step.title }}</h3>
+        <p>{{ $step.description }}</p>
+      </li>
+      {{ end }}
+    </ol>
+  </div>
+</section>

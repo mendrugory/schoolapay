@@ -1,0 +1,20 @@
+<section class="section section-alt" id="problem">
+  <div class="container">
+    <p class="eyebrow">{{ .data.eyebrow }}</p>
+    <h2 class="section-title">{{ .data.headline }}</h2>
+    <p class="section-lead">{{ .data.copy }}</p>
+    <div class="problem-grid">
+      {{ range .data.cards }}
+      <article class="card problem-card problem-card--{{ .color }}">
+        <span class="problem-icon problem-icon--{{ .color }}" aria-hidden="true">
+          {{ partial "icon.html" (dict "name" .icon) }}
+        </span>
+        <h3>{{ .title }}</h3>
+      </article>
+      {{ end }}
+    </div>
+    <div class="section-cta">
+      <a href="#demo" class="btn btn-primary">Request a Demo</a>
+    </div>
+  </div>
+</section>
