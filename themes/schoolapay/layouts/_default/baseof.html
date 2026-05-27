@@ -3,13 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ if .IsHome }}SchoolaPay | School Activity Payments Made Simple{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
-  <meta name="description" content="{{ .Site.Params.description }}">
-  <meta property="og:title" content="SchoolaPay | School Activity Payments Made Simple">
-  <meta property="og:description" content="{{ .Site.Params.description }}">
+  {{ $pageTitle := cond .IsHome "SchoolaPay | School Activity Payments Made Simple" (printf "%s | %s" .Title .Site.Title) }}
+  {{ $pageDescription := .Description | default .Site.Params.description }}
+  <title>{{ $pageTitle }}</title>
+  <meta name="description" content="{{ $pageDescription }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <meta property="og:title" content="{{ $pageTitle }}">
+  <meta property="og:description" content="{{ $pageDescription }}">
   <meta property="og:site_name" content="SchoolaPay">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="{{ .Site.BaseURL }}">
+  <meta property="og:url" content="{{ .Permalink }}">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">

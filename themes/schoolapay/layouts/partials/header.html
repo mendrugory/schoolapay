@@ -1,14 +1,18 @@
 <header class="site-header" id="site-header">
+  {{ $anchorPrefix := "" }}
+  {{ if not .IsHome }}
+    {{ $anchorPrefix = "/" }}
+  {{ end }}
   <div class="container header-inner">
     {{ partial "logo.html" . }}
-    <nav class="nav-desktop" aria-label="Main navigation">
-      <a href="#features">Features</a>
-      <a href="#how-it-works">How It Works</a>
-    <a href="#schools">For Schools</a>
-      <a href="#parents">For Parents</a>
-      <a href="#security">Security</a>
-      <a href="#faq">FAQ</a>
-      <a href="#demo" class="btn btn-primary btn-sm nav-demo-btn">Request a Demo</a>
+    <nav class="nav-desktop" id="desktop-nav" aria-label="Main navigation">
+      <a href="{{ $anchorPrefix }}#features">Features</a>
+      <a href="{{ $anchorPrefix }}#how-it-works">How It Works</a>
+      <a href="{{ $anchorPrefix }}#schools">For Schools</a>
+      <a href="{{ $anchorPrefix }}#parents">For Parents</a>
+      <a href="{{ $anchorPrefix }}#security">Security</a>
+      <a href="{{ $anchorPrefix }}#faq">FAQ</a>
+      <a href="{{ $anchorPrefix }}#demo" class="btn btn-primary btn-sm nav-demo-btn">Request a Demo</a>
     </nav>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
       <span class="menu-bar"></span>
@@ -16,13 +20,13 @@
       <span class="menu-bar"></span>
     </button>
   </div>
-  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
-    <a href="#features">Features</a>
-    <a href="#how-it-works">How It Works</a>
-    <a href="#schools">For Schools</a>
-    <a href="#parents">For Parents</a>
-    <a href="#security">Security</a>
-    <a href="#faq">FAQ</a>
-    <a href="#demo" class="btn btn-primary btn-block">Request a Demo</a>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" aria-hidden="true" hidden>
+    <a href="{{ $anchorPrefix }}#features">Features</a>
+    <a href="{{ $anchorPrefix }}#how-it-works">How It Works</a>
+    <a href="{{ $anchorPrefix }}#schools">For Schools</a>
+    <a href="{{ $anchorPrefix }}#parents">For Parents</a>
+    <a href="{{ $anchorPrefix }}#security">Security</a>
+    <a href="{{ $anchorPrefix }}#faq">FAQ</a>
+    <a href="{{ $anchorPrefix }}#demo" class="btn btn-primary btn-block">Request a Demo</a>
   </nav>
 </header>

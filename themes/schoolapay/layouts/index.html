@@ -3,6 +3,7 @@
 {{ partial "header.html" . }}
 <main id="main-content">
   {{ partial "hero.html" (dict "ctx" . "data" $d.hero) }}
+  {{ partial "audience-strip.html" (dict "data" $d.who_its_for) }}
   {{ partial "problem.html" (dict "data" $d.problem) }}
   {{ partial "solution.html" (dict "data" $d.solution) }}
   {{ partial "how-it-works.html" (dict "data" $d.how_it_works) }}

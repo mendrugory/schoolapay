@@ -1,0 +1,17 @@
+{{ define "main" }}
+{{ partial "header.html" . }}
+<main id="main-content">
+  <section class="section legal-section">
+    <div class="container legal-container">
+      <h1 class="section-title">{{ .Title }}</h1>
+      {{ with .Description }}
+      <p class="section-lead">{{ . }}</p>
+      {{ end }}
+      <div class="legal-content">
+        {{ .Content }}
+      </div>
+    </div>
+  </section>
+</main>
+{{ partial "footer.html" . }}
+{{ end }}

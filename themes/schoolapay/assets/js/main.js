@@ -13,17 +13,22 @@
   }
 
   function closeMobileNav() {
+    const wasOpen = menuToggle?.getAttribute('aria-expanded') === 'true';
     menuToggle?.setAttribute('aria-expanded', 'false');
     menuToggle?.setAttribute('aria-label', 'Open menu');
     mobileNav?.setAttribute('hidden', '');
+    mobileNav?.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('nav-open');
+    if (wasOpen) menuToggle?.focus();
   }
 
   function openMobileNav() {
     menuToggle?.setAttribute('aria-expanded', 'true');
     menuToggle?.setAttribute('aria-label', 'Close menu');
     mobileNav?.removeAttribute('hidden');
+    mobileNav?.removeAttribute('aria-hidden');
     document.body.classList.add('nav-open');
+    mobileNav?.querySelector('a')?.focus();
   }
 
   menuToggle?.addEventListener('click', () => {
@@ -33,6 +38,12 @@
 
   mobileNav?.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', closeMobileNav);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menuToggle?.getAttribute('aria-expanded') === 'true') {
+      closeMobileNav();
+    }
   });
 
   window.addEventListener('scroll', setHeaderScrolled, { passive: true });
@@ -84,6 +95,7 @@
   const submitBtn = document.getElementById('demo-submit');
 
   const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const websiteRe = /^(https?:\/\/)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(\/.*)?$/;
 
   function showFieldError(name, message) {
     const input = form.elements[name];
@@ -119,6 +131,12 @@
       valid = false;
     }
 
+    const schoolWebsite = String(data.get('schoolWebsite') || '').trim();
+    if (schoolWebsite && !websiteRe.test(schoolWebsite)) {
+      showFieldError('schoolWebsite', 'Please enter a valid website address.');
+      valid = false;
+    }
+
     const students = Number(data.get('students'));
     if (data.get('students') && (Number.isNaN(students) || students < 1)) {
       showFieldError('students', 'Please enter a valid number of students.');
@@ -149,6 +167,9 @@
     /* Add extra context fields */
     formData.set('source', 'SchoolaPay landing page');
     formData.set('submitted_at', new Date().toISOString());
+    if (!String(formData.get('schoolWebsite') || '').trim()) {
+      formData.set('schoolWebsite', 'Not provided');
+    }
 
     const payload = Object.fromEntries(formData.entries());
 

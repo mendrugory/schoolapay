@@ -1,7 +1,44 @@
 <footer class="site-footer">
-  <div class="container footer-inner">
-    {{ partial "logo.html" . }}
+  <div class="container footer-top">
+    <div>
+      {{ partial "logo.html" . }}
+      <p class="footer-description">SchoolaPay helps schools manage activity payments, QR ticketing, receipts, reminders, and parent coordination in one secure platform.</p>
+      <p class="footer-security-note">Designed for clear records, controlled access, and responsible handling of school community information.</p>
+    </div>
+    <div>
+      <p class="footer-heading">Product</p>
+      <ul class="footer-links">
+        <li><a href="/#features">Features</a></li>
+        <li><a href="/#how-it-works">How It Works</a></li>
+        <li><a href="/#schools">For Schools</a></li>
+        <li><a href="/#parents">For Parents</a></li>
+        <li><a href="/security">Security</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-heading">Company</p>
+      <ul class="footer-links">
+        <li><a href="{{ if .IsHome }}#demo{{ else }}/#demo{{ end }}">Request a Demo</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/#proof">Pilot Program</a></li>
+        <li><a href="mailto:{{ .Site.Params.contact_email }}">{{ .Site.Params.contact_email }}</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-heading">Legal</p>
+      <ul class="footer-links">
+        <li><a href="/privacy">Privacy Policy</a></li>
+        <li><a href="/terms">Terms</a></li>
+        <li><a href="/security">Security</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
     <p class="footer-copy">&copy; {{ now.Year }} SchoolaPay. All rights reserved.</p>
-    <a href="mailto:{{ .Site.Params.contact_email }}" class="footer-email">{{ .Site.Params.contact_email }}</a>
+    <div class="footer-bottom-links">
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms</a>
+      <a href="/contact">Contact</a>
+    </div>
   </div>
 </footer>

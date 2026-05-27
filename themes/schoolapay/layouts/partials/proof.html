@@ -2,24 +2,32 @@
   <div class="container">
     <p class="eyebrow">{{ .data.eyebrow }}</p>
     <h2 class="section-title">{{ .data.headline }}</h2>
+    <p class="section-lead">{{ .data.copy }}</p>
     <div class="proof-metrics">
       {{ range .data.metrics }}
       <article class="card proof-metric">
-        <p class="metric-label">{{ .title }}</p>
-        <p class="metric-value">{{ .value }}</p>
+        <h3 class="metric-label">{{ .title }}</h3>
+        <p class="metric-copy">{{ .copy }}</p>
       </article>
       {{ end }}
     </div>
-    <div class="proof-testimonials">
-      {{ range seq 2 }}
-      <article class="card testimonial-placeholder">
-        <p class="placeholder-label">{{ $.data.testimonial_label }}</p>
-        <p>{{ $.data.testimonial_copy }}</p>
-      </article>
-      {{ end }}
+    <div class="proof-feedback card">
+      <p class="placeholder-label">{{ .data.pilot_feedback_title }}</p>
+      <p>{{ .data.pilot_feedback_copy }}</p>
+      <a href="{{ .data.pilot_feedback_cta_href }}" class="btn btn-secondary">{{ .data.pilot_feedback_cta_text }}</a>
     </div>
-    <div class="section-cta">
-      <button type="button" class="btn btn-secondary" disabled>Case Studies Coming Soon</button>
+    <div class="proof-pilot-cta card">
+      <h3>{{ .data.pilot_cta_title }}</h3>
+      <p>{{ .data.pilot_cta_copy }}</p>
+      <ul>
+        {{ range .data.pilot_cta_bullets }}
+        <li><span class="check" aria-hidden="true">✓</span>{{ . }}</li>
+        {{ end }}
+      </ul>
+      <p class="proof-pilot-note">{{ .data.pilot_cta_note }}</p>
+      <div class="section-cta">
+        <a href="{{ .data.cta_href }}" class="btn btn-primary">{{ .data.cta_text }}</a>
+      </div>
     </div>
   </div>
 </section>

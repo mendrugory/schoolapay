@@ -1,0 +1,19 @@
+<section class="section audience-strip" id="who-its-for">
+  <div class="container">
+    <h2 class="section-title audience-strip-title">{{ .data.title }}</h2>
+    <p class="section-lead audience-strip-copy">{{ .data.copy }}</p>
+    <div class="audience-grid">
+      {{ range .data.audiences }}
+      <article class="card audience-card">
+        <span class="audience-icon" aria-hidden="true">
+          {{ partial "icon.html" (dict "name" .icon) }}
+        </span>
+        <div>
+          <h3>{{ .title }}</h3>
+          <p>{{ .description }}</p>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>

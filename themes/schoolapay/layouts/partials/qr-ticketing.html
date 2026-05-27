@@ -23,7 +23,37 @@
           <p class="qr-phone-event">Spring Theatre Show</p>
           <div class="qr-code-large">
             <div class="qr-pulse"></div>
-            <div class="qr-grid qr-grid--large"></div>
+            {{ $matrix := slice
+              "111111100101101111111"
+              "100000101010101000001"
+              "101110101101101011101"
+              "101110100110101011101"
+              "101110101011101011101"
+              "100000100100101000001"
+              "111111101010101111111"
+              "000000001101100000000"
+              "110101001011010110100"
+              "101010110100101001011"
+              "010101011010110011010"
+              "110100100101101010110"
+              "101010101010101010101"
+              "000000001011010110010"
+              "111111100110101010110"
+              "100000101010101010101"
+              "101110100110101010110"
+              "101110101101010101010"
+              "101110100110010110100"
+              "100000101010110100101"
+              "111111101101010110010"
+            }}
+            <svg class="qr-svg qr-grid--large" viewBox="0 0 21 21" shape-rendering="crispEdges" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <rect width="21" height="21" fill="#ffffff"/>
+              {{- range $y, $row := $matrix -}}
+                {{- range $x, $bit := split $row "" -}}
+                  {{- if eq $bit "1" -}}<rect x="{{ $x }}" y="{{ $y }}" width="1" height="1" fill="#0b1d3a"/>{{- end -}}
+                {{- end -}}
+              {{- end -}}
+            </svg>
           </div>
           <p class="qr-valid">Valid · Scanned at gate</p>
         </div>

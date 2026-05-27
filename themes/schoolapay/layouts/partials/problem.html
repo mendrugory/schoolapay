@@ -3,6 +3,9 @@
     <p class="eyebrow">{{ .data.eyebrow }}</p>
     <h2 class="section-title">{{ .data.headline }}</h2>
     <p class="section-lead">{{ .data.copy }}</p>
+    {{ with .data.cycle_copy }}
+    <p class="problem-cycle-copy">{{ . }}</p>
+    {{ end }}
     <div class="problem-grid">
       {{ range .data.cards }}
       <article class="card problem-card problem-card--{{ .color }}">

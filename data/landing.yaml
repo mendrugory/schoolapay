@@ -2,7 +2,8 @@ hero:
   badge: "Built for Schools. Loved by Parents."
   headline: "The simplest way for schools to manage activity payments and parent coordination."
   headline_emphasis: "simplest"
-  subheadline: "SchoolaPay helps schools simplify payments, reminders, QR ticketing, receipts, and communication — all in one secure platform."
+  subheadline: "SchoolaPay helps schools replace cash collection, spreadsheet tracking, and WhatsApp follow-ups with one secure workflow for payments, reminders, QR ticketing, and receipts."
+  secondary_cta_text: "See How It Works"
   trust:
     - Mobile-first
     - QR Ticketing
@@ -13,6 +14,7 @@ problem:
   eyebrow: "The Challenge"
   headline: "Managing school activities shouldn't be this hard."
   copy: "Schools and parent coordinators often rely on outdated, fragmented tools that create more work and more confusion."
+  cycle_copy: "Every activity creates the same cycle: payment questions, reminder messages, receipt requests, spreadsheet updates, and entry checks on the event day."
   cards:
     - title: Cash collection friction
       color: blue
@@ -188,19 +190,35 @@ trust:
       icon: eye
 
 proof:
-  eyebrow: "Pilot-Ready Proof"
+  eyebrow: "Pilot Measurement Framework"
   headline: "Built to measure what matters during school pilots."
+  copy: "During each school pilot, SchoolaPay tracks practical operational metrics so schools can evaluate reduced manual follow-up, improved parent payment visibility, and clearer event access workflows."
   metrics:
-    - title: Payment completion
-      value: "Measured during pilot"
-    - title: Parent activation
-      value: "Measured during pilot"
-    - title: Admin time saved
-      value: "Measured during pilot"
-    - title: Scan validation success
-      value: "Measured during pilot"
-  testimonial_label: "Pilot testimonial placeholder"
-  testimonial_copy: "Use this space for feedback from school operations teams after the pilot program."
+    - title: Payment Completion
+      copy: "Track how many assigned activity payments are completed within the expected collection window."
+    - title: Parent Activation
+      copy: "Measure how many parents successfully access assigned activities, receipts, and tickets."
+    - title: Admin Time Saved
+      copy: "Compare manual follow-up, tracking, and reconciliation effort before and after the pilot."
+    - title: QR Scan Success
+      copy: "Monitor ticket validation speed, duplicate-scan prevention, and event check-in accuracy."
+    - title: Reconciliation Speed
+      copy: "Review how quickly finance and admin teams can confirm collections and export records."
+  pilot_feedback_title: "Pilot feedback will be captured after onboarding."
+  pilot_feedback_copy: "SchoolaPay is designed to help schools evaluate real outcomes during controlled pilots, including payment completion, parent activation, admin time saved, and QR validation performance."
+  pilot_feedback_cta_text: "Discuss a School Pilot"
+  pilot_feedback_cta_href: "#demo"
+  cta_text: "Request a Demo"
+  cta_href: "#demo"
+  pilot_cta_title: "Start with a focused school pilot."
+  pilot_cta_copy: "Pilot SchoolaPay with selected activities, events, or year groups before expanding across more school workflows."
+  pilot_cta_bullets:
+    - Test activity payment collection
+    - Measure parent activation
+    - Validate QR ticket scanning
+    - Review reconciliation improvements
+    - Gather feedback from school staff and parents
+  pilot_cta_note: "We'll help you define a practical pilot scope for your school."
 
 faq:
   headline: "Frequently asked questions."
@@ -221,14 +239,43 @@ faq:
       answer: "The onboarding flow is designed to be simple and mobile-first, helping parents connect to their child profile and view assigned activities quickly."
     - question: Does it work on mobile devices?
       answer: "Yes. SchoolaPay is designed mobile-first for busy parents and staff who need quick access from their phones."
+    - question: How long does setup take?
+      answer: "SchoolaPay is designed for guided onboarding. Setup time depends on the school's activity structure, payment provider, and parent rollout plan."
+    - question: Can we run a pilot first?
+      answer: "Yes. Schools can start with a controlled pilot for selected activities, events, or year groups before expanding to more workflows."
+    - question: Does SchoolaPay replace our existing finance system?
+      answer: "No. SchoolaPay is designed to simplify activity-level payments and coordination, with reporting and exports that support existing finance workflows."
+    - question: Can parent committees use it?
+      answer: "Yes, where approved by the school. Workflows should remain school-controlled with clear permissions, reporting, and visibility."
 
 demo:
   headline: "See SchoolaPay in action."
-  copy: "Let our team show you how SchoolaPay can simplify your school's activity management and payment workflow."
+  copy: "Book a short walkthrough to see how SchoolaPay can handle activity payments, reminders, receipts, QR tickets, and attendance validation for your school's current workflow."
   bullets:
     - We'll contact you within 1 business day
     - Personalized demo for your school
+    - Practical pilot discussion available
     - No commitment required
   privacy: "Your information is only used to respond to your demo request."
   success: "Thank you. Our team will contact you within 1 business day."
   error: "Something went wrong. Please try again or email us directly."
+
+who_its_for:
+  title: "Built for the people who manage school activities."
+  copy: "From activity setup to payment tracking and event entry, SchoolaPay supports the teams and families involved in every school activity."
+  audiences:
+    - title: School administrators
+      description: "Create and oversee activities."
+      icon: school
+    - title: Finance teams
+      description: "Track collections and reconciliation."
+      icon: finance
+    - title: Parent committees
+      description: "Coordinate payments and communication."
+      icon: users
+    - title: Event coordinators
+      description: "Validate tickets and attendance."
+      icon: events
+    - title: Parents
+      description: "Pay, receive receipts, and access tickets."
+      icon: parents
